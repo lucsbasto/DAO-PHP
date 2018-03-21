@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Lucas
- * Date: 20/03/2018
- * Time: 23:28
- */
+require_once "config.php";
+
+$sql = new Sql();
+$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+
+echo json_encode($usuarios);
+
+?>

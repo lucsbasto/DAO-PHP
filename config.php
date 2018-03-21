@@ -1,7 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Lucas
- * Date: 20/03/2018
- * Time: 23:26
- */
+
+spl_autoload_register(function ($class_name){
+    $file = "class".DIRECTORY_SEPARATOR."$class_name.php";
+    if(file_exists($file)){
+        require_once "$file";
+    }
+});
+
+?>
