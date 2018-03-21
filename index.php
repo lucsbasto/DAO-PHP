@@ -1,9 +1,17 @@
 <?php
 require_once "config.php";
 
-$sql = new Sql();
-$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+//$usuario = new Usuario();
+//$usuario->loadById(22);
+//echo $usuario;
+//$list = Usuario::getList();
+//echo json_encode($list);
+//
+//$search = Usuario::search("o");
+//echo json_encode($search);
 
-echo json_encode($usuarios);
+$usuario = new Usuario();
+$usuario->login("lucas", "lucas");
 
+echo $usuario;
 ?>
